@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rb.snake.controller.MainMenuController">
+   <children>
+      <ImageView fitHeight="184.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../assets/banner.png" />
+         </image>
+         
+      </ImageView>
+      <Button fx:id="goToSP" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSP" prefHeight="50.0" prefWidth="200.0" text="Singleplayer">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></Button>
+      <Button fx:id="goToMP" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMP" prefHeight="50.0" prefWidth="200.0" text="Multiplayer">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="goToSettings" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToOp" prefHeight="50.0" prefWidth="200.0" text="Options">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="goToLB" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToLB" prefHeight="50.0" prefWidth="200.0" text="Leaderboards">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="exit" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="200.0" text="Exit">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/base.css" />
+   </stylesheets>
+</VBox>

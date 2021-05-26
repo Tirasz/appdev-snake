@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Light Pixel-7";
+  src: url("LIGHT_PIXEL.ttf");
+}
+
+:root {
+  --background: #E5FFB3;
+  --background-accent: #DBF8A3;
+  --background-accent-2: #BDE66E;
+  --green_light: #92DE34;
+  --green_dark: #69BC22;
+  --text: #025600;
+  --yellow_light: #f0ff35;
+  --yellow_dark: #9aa41d;
+  --red_light: #ae5646;
+  --red_dark: #6e1008;
+}
+
+* {
+  font: 20px "Light Pixel-7";
+}
+
+body {
+  background-image: linear-gradient(rgb(121,152,12), rgb(211, 233, 85));
+  background-size: cover;
+  min-height: 98vh;
+}
+
+#header-container{
+  margin:10px;
+
+}
+
+#header-container *{
+  margin:10px;
+}
+
+
+
+
+@keyframes button-bckg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+button, a {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--green_light);
+
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--green_light) inset;
+
+}
+
+
+
+button:hover {
+  background-image: linear-gradient(
+          90deg,
+          transparent 10%,
+          var(--green_dark) 10% 20%,
+          transparent 20% 30%,
+          var(--green_dark) 30% 40%,
+          transparent 40% 50%,
+          var(--green_dark) 50% 60%,
+          transparent 60% 70%,
+          var(--green_dark) 70% 80%,
+          transparent 80% 90%,
+          var(--green_dark) 90% 100%
+  );
+  animation: button-bckg 3s linear infinite;
+}
+
+
+.editButton {
+  background-color: var(--yellow_light);
+  box-shadow: 0 0 0 7px var(--yellow_light) inset;
+  width: 80px;
+  height: 50px;
+  color: black;
+  font-size: 30px;
+}
+
+.editButton:hover{
+  color:#555a11;
+  background-image: linear-gradient(
+          90deg,
+          transparent 10%,
+          var(--yellow_dark) 10% 20%,
+          transparent 20% 30%,
+          var(--yellow_dark) 30% 40%,
+          transparent 40% 50%,
+          var(--yellow_dark) 50% 60%,
+          transparent 60% 70%,
+          var(--yellow_dark) 70% 80%,
+          transparent 80% 90%,
+          var(--yellow_dark) 90% 100%
+  );
+  animation: button-bckg 10s linear infinite;
+}
+
+
+.deleteButton{
+  background-color: var(--red_light);
+  box-shadow: 0 0 0 7px var(--red_light) inset;
+  width: 80px;
+  height: 50px;
+  color: black;
+  font-size: 30px;
+}
+
+
+.deleteButton:hover{
+  color:#470c06;
+  background-image: linear-gradient(
+          90deg,
+          transparent 10%,
+          var(--red_dark) 10% 20%,
+          transparent 20% 30%,
+          var(--red_dark) 30% 40%,
+          transparent 40% 50%,
+          var(--red_dark) 50% 60%,
+          transparent 60% 70%,
+          var(--red_dark) 70% 80%,
+          transparent 80% 90%,
+          var(--red_dark) 90% 100%
+  );
+  animation: button-bckg 10s linear infinite;
+}
+
+
+
+#mp-container{
+  display:none;
+}
+
+table{
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(30, 255, 0, 0.15);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+table tbody tr{
+  border-bottom: thin solid #9cff99;
+  background-color:  rgba(134, 255, 118, 0.13);
+}
+
+table tbody tr:nth-of-type(even){
+  background-color:  rgba(70, 134, 61, 0.13);
+}
+
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #093613;
+}
+
+td{
+  vertical-align: middle;
+}
+
+th{
+  background-image: linear-gradient(#81d339, #69bc22);
+  border:none;
+
+}
+
+a{
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 4%;
+}
+
+
+input{
+    display: block;
+}
+
+form{
+    text-align: center;
+    margin-top: 25px !important;
+}
+
+form *{
+    margin:auto;
+}
+
+form button{
+    max-width: 50%;
+    max-height: 15%;
+    margin-top: 20px;
+}

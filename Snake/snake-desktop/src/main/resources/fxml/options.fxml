@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rb.snake.controller.OptionsMenuController">
+   <children>
+      <Text boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Level size">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <ToggleButton fx:id="ls_small" mnemonicParsing="false" onAction="#setLevelSize" prefHeight="50.0" prefWidth="150.0" styleClass="green" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="level_size" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="ls_medium" mnemonicParsing="false" onAction="#setLevelSize" prefHeight="50.0" prefWidth="150.0" styleClass="yellow" text="Medium" toggleGroup="$level_size" />
+            <ToggleButton fx:id="ls_large" mnemonicParsing="false" onAction="#setLevelSize" prefHeight="50.0" prefWidth="150.0" styleClass="red" text="Large" toggleGroup="$level_size" />
+            <ToggleButton fx:id="ls_custom" mnemonicParsing="false" onAction="#setLevelSize" prefHeight="50.0" prefWidth="150.0" styleClass="purple" text="Custom" toggleGroup="$level_size" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Text boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <ToggleButton fx:id="df_easy" mnemonicParsing="false" onAction="#setDifficulty" prefHeight="50.0" prefWidth="150.0" styleClass="green" text="Easy">
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficulty" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="df_medium" mnemonicParsing="false" onAction="#setDifficulty" prefHeight="50.0" prefWidth="150.0" styleClass="yellow" text="Medium" toggleGroup="$difficulty" />
+            <ToggleButton fx:id="df_hard" mnemonicParsing="false" onAction="#setDifficulty" prefHeight="50.0" prefWidth="150.0" styleClass="red" text="Hard" toggleGroup="$difficulty" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Text boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <ToggleButton fx:id="w_on" mnemonicParsing="false" onAction="#setWalls" prefHeight="50.0" prefWidth="150.0" styleClass="red" text="On">
+               <toggleGroup>
+                  <ToggleGroup fx:id="level_walls" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="w_off" mnemonicParsing="false" onAction="#setWalls" prefHeight="50.0" prefWidth="150.0" styleClass="green" text="Off" toggleGroup="$level_walls" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Text boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Food color">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <ColorPicker fx:id="foodColorPicker" onAction="#changeFoodColor" styleClass="cp">
+               <value>
+                  <Color green="1.0" blue="0.03333333507180214" />
+               </value>
+            </ColorPicker>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToMain" prefHeight="50.0" prefWidth="100.0" text="Back" />
+   </children>
+   <stylesheets>
+      <URL value="@../styles/base.css" />
+   </stylesheets>
+</VBox>
